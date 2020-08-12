@@ -1,0 +1,299 @@
+// Colors
+$veryDarkBlue: hsl(243, 87%, 12%);
+$desaturatedBlue: hsl(238, 22%, 44%);
+
+$brightBlue: hsl(224, 93%, 58%);
+$moderateCyan: hsl(170, 45%, 43%);
+
+$lightGrayishBlue: hsl(240, 75%, 98%);
+$lightGray: hsl(0, 0%, 75%);
+
+// Mixins
+@mixin bordered($color) {
+  border: 1px solid $color;
+  border-radius: 2px;
+  padding: 15px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $veryDarkBlue;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  // background-color: red;
+}
+h1,
+h2,
+h4 {
+  font-family: "Raleway", sans-serif;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+img {
+  max-width: 100%;
+}
+input {
+  font-size: 14px;
+  &::placeholder {
+    color: $lightGray;
+  }
+}
+
+button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  padding: 1.875rem;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1200px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  & > div,
+  & > ul {
+    flex: 1;
+  }
+
+  & > div:first-child {
+    margin-right: 1.25rem;
+  }
+  & > div:last-child {
+    margin-left: 1.25rem;
+  }
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+// Nav Styling
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.875rem 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 3.125rem;
+      a {
+        font-family: "Raleway", sans-serif;
+        color: $veryDarkBlue;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Form Section
+form {
+  display: flex;
+  input {
+    @include bordered($veryDarkBlue);
+    flex: 0.7;
+  }
+  button {
+    @include bordered($brightBlue);
+    background-color: $brightBlue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    flex: 0.3;
+    margin-left: 1.125rem;
+  }
+}
+
+// Sections
+.light-bluish {
+  background-color: $lightGrayishBlue;
+  // background-color: $lightGray;
+  margin-top: 6.25rem;
+  padding: 3.125rem 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/images/bg-curve-desktop.svg");
+    background-size: cover;
+    background-position: center center;
+    height: 3.75rem;
+    width: 100%;
+    position: absolute;
+    top: -3.75rem;
+    left: 0;
+  }
+
+  a {
+    color: $moderateCyan;
+  }
+}
+
+// Testimonial section
+.testimonial-box {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 1.5625rem;
+  margin-top: 2.5rem;
+  width: 80%;
+
+  p {
+    letter-spacing: 1px;
+    line-height: 1.7;
+    font-size: 14px;
+  }
+
+  .user-info {
+    display: flex;
+    margin-top: 1.25rem;
+    img {
+      border-radius: 50%;
+      height: 3.125rem;
+      width: 3.125rem;
+      margin-right: 10px;
+    }
+    h4 {
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+}
+
+// Subscription section
+.bluish {
+  background-color: $desaturatedBlue;
+  color: #fff;
+  padding: 3.125rem 0;
+
+  form {
+    flex-direction: column;
+    input {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      border: none;
+      flex: 1;
+    }
+    button {
+      margin: 1.25rem 0 0;
+      width: 50%;
+    }
+  }
+}
+
+// Footer styling
+footer {
+  background-color: $veryDarkBlue;
+  color: #fff;
+  padding: 11.25rem 0 3.75rem;
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    height: 2.5rem;
+    width: 2.5rem;
+    text-decoration: none;
+  }
+
+  p {
+  }
+}
+
+// Media Query
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    margin: 10px 0;
+
+    ul li {
+      margin: 10px 1.25rem;
+    }
+  }
+
+  .light-bluish::before {
+    background-image: url("/images/bg-curve-mobile.svg");
+    height: 5rem;
+  }
+
+  .flex {
+    flex-direction: column;
+
+    & > div {
+      width: 100%;
+      &:first-child {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .testimonial-box {
+    width: 100%;
+  }
+
+  .bluish {
+    form {
+      input {
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .illustration {
+    margin-top: 1.875rem;
+  }
+
+  .user-info {
+    justify-content: center;
+  }
+
+  footer {
+    ul {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
