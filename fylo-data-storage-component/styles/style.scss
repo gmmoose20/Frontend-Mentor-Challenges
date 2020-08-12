@@ -1,0 +1,192 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+// Colors
+$paleBlue: hsl(243, 100%, 93%);
+$grayishBlue: hsl(229, 7%, 55%);
+$darkBlue: hsl(228, 56%, 26%);
+$veryDarkBlue: hsl(229, 57%, 11%);
+
+// Gradient
+$gradientColor1: hsl(6, 100%, 80%);
+$gradientColor2: hsl(335, 100%, 65%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $paleBlue;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+main {
+  height: 100vh;
+  background: $veryDarkBlue url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 820px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.component-container {
+  margin-top: -50px;
+}
+
+.logo-container {
+  background-color: $darkBlue;
+  border-radius: 10px 40% 10px 10px;
+  width: 325px;
+  height: 200px;
+
+  display: block;
+  padding: 40px;
+  margin-bottom: 15px;
+
+  .icon-container {
+    display: flex;
+    margin-top: 30px;
+    a {
+      background-color: $veryDarkBlue;
+      border-radius: 8px;
+      height: 45px;
+      width: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-right: 15px;
+    }
+  }
+}
+
+.progressbar-container {
+  background-color: $darkBlue;
+  border-radius: 10px;
+  width: 325px;
+  height: 160px;
+
+  padding: 30px;
+  position: relative;
+
+  p {
+    text-align: center;
+    span {
+      font-weight: 700;
+    }
+  }
+
+  .bar {
+    background-color: $veryDarkBlue;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    height: 15px;
+    overflow: hidden;
+
+    .pbar {
+      height: 15px;
+      background: linear-gradient(to right, $gradientColor1, $gradientColor2);
+      display: block;
+      width: 75%;
+      position: relative;
+      border-radius: 20px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        right: 4px;
+        top: 1.7px;
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .status {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+  }
+
+  .bubble {
+    background-color: $paleBlue;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    width: 180px;
+    height: 70px;
+    position: absolute;
+    bottom: -20%;
+    left: 20%;
+
+    p {
+      font-weight: 700;
+      margin-right: 10px;
+      color: #000;
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 1rem;
+      color: $grayishBlue;
+    }
+  }
+}
+
+@media (min-width: 930px) {
+  main {
+    background: $veryDarkBlue url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: center bottom;
+  }
+
+  .component-container {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .logo-container {
+    margin-right: 30px;
+    margin-bottom: 0;
+    width: 350px;
+  }
+
+  .progressbar-container {
+    width: 540px;
+    height: 150px;
+
+    p {
+      color: $paleBlue;
+      text-align: left;
+      line-height: 2;
+    }
+    .bubble {
+      top: -35%;
+      left: 60%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        border: 15px solid transparent;
+        border-top-color: $paleBlue;
+        border-right-color: $paleBlue;
+        bottom: -30%;
+        right: 0;
+      }
+    }
+  }
+}
