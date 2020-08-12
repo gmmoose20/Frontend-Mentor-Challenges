@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+	/* Primary Colors*/
+	--red: hsl(0, 78%, 62%);
+	--cyan: hsl(180, 62%, 55%);
+	--orange: hsl(34, 97%, 64%);
+	--blue: hsl(212, 86%, 64%);
+
+	/* Neutral */
+	--veryDarkBlue: hsl(234, 12%, 34%);
+	--grayishBlue: hsl(229, 6%, 66%);
+	--veryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--veryLightGray);
+	font-family: 'Poppins', sans-serif;
+}
+
+header {
+	font-size: 1.14rem;
+	line-height: 1.4;
+	text-align: center;
+	margin: 80px auto 60px auto;
+	max-width: 510px;
+}
+
+header h1 {
+	font-weight: 200;
+	color: var(--veryDarkBlue);
+
+}
+
+header h1 span {
+	font-weight: 600;
+	color: #000;
+}
+
+header p {
+	color: var(--grayishBlue);
+	margin-top: 20px;
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+footer {
+	text-align: center;
+
+}
+
+/* Cards */
+
+.cards-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+
+}
+
+.cards {
+	height: 250px;
+	max-width: 350px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin: 5px 15px 20px 15px;
+	padding: 19px;
+	line-height: 1.7;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08), 0 6px 6px rgba(0, 0, 0, 0.12);
+}
+
+.cards h3 {
+	color: var(--veryDarkBlue);
+	margin-top: 10px;
+	margin-left: 12px;
+	font-size: 1.25rem;
+}
+
+.cards p {
+	color: var(--grayishBlue);
+	font-size: 0.85rem;
+	margin-top: 5px;
+	margin-left: 12px;
+	padding-right: 10px;
+}
+
+.cards img {
+	display: block;
+	margin-left: auto;
+	margin-top: 14px;
+	padding: 25px 10px;
+}
+
+/* Middle Column */
+.col-2 {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Card colors */
+.cyan-card {
+	border-top: 4px solid var(--cyan);
+}
+
+.red-card {
+	border-top: 4px solid var(--red);
+	margin-top: 0px;
+}
+
+.orange-card {
+	border-top: 4px solid var(--orange);
+	margin-top: 10px;
+}
+
+.blue-card {
+	border-top: 4px solid var(--blue);
+}
+
+/* Media Queries */
+@media (max-width: 1170px) {
+
+	header {
+		width: 350px;
+		padding: 0 20px;
+
+	}
+
+	header h1 {
+		font-size: 1.55rem;
+	}
+
+	.cards-container {
+		flex-direction: column;
+	}
+
+}
