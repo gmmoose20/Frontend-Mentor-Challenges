@@ -1,0 +1,10 @@
+@import "colors";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: $linear-one;
+  font-family: $myFont;
+  margin: 0;
+}
