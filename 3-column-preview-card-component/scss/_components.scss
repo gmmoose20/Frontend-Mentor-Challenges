@@ -1,0 +1,84 @@
+@use "../scss/base" as *;
+
+// Mobile First Approach (Mobile Styling)
+main {
+  padding: 90px 25px;
+
+  .car-container {
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .car {
+      height: 445px;
+      width: 100%;
+      padding: 40px 45px 40px 50px;
+
+      &.sedan {
+        background-color: $primary1;
+      }
+
+      &.suv {
+        background-color: $primary2;
+      }
+
+      &.luxury {
+        background-color: $primary3;
+      }
+
+      button {
+        margin: 50px 0 10px 0;
+        padding: 18px 30px;
+        border-radius: 30px;
+        border: 2px solid $neutral2;
+        outline: none;
+        width: 150px;
+        transition: all 0.3s ease-out;
+        background: $neutral2;
+
+        &.btn-sedan {
+          color: $primary1;
+          &:hover {
+            background: $primary1;
+          }
+        }
+
+        &.btn-suv {
+          color: $primary2;
+          &:hover {
+            background: $primary2;
+          }
+        }
+
+        &.btn-luxury {
+          color: $primary3;
+          &:hover {
+            background: $primary3;
+          }
+        }
+        &:hover {
+          color: $neutral2;
+          border: 2px solid $neutral2;
+        }
+      }
+    }
+  }
+}
+
+// Mobile First Approach (Desktop Styling)
+@media (min-width: 800px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    .car-container {
+      max-width: 920px;
+      flex-wrap: nowrap;
+    }
+  }
+}

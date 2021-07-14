@@ -1,0 +1,46 @@
+// Colors
+$primary1: hsl(31, 77%, 52%);
+$primary2: hsl(184, 100%, 22%);
+$primary3: hsl(179, 100%, 13%);
+
+// Neutral
+$neutral1: hsla(0, 0%, 100%, 0.75); //paragraphs
+$neutral2: hsl(0, 0%, 95%); // background, headings, buttons
+
+// Typography
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+$fontFamily1: "Lexend Deca", sans-serif;
+$fontFamily2: "Big Shoulders Display", cursive;
+$fontSize: 15px;
+
+// resets
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 2;
+  font-family: $fontFamily2;
+  font-size: 15px;
+  height: 100vh;
+  background-color: $neutral2;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: $neutral2;
+  margin: 25px 0;
+  font-size: 2rem;
+}
+
+p {
+  color: $neutral1;
+  font-family: $fontFamily1;
+  opacity: 0.8;
+}
