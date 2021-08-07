@@ -18,6 +18,21 @@ $font2: "Lexend Deca", sans-serif;
 
 // Resets
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background: $mainBackground;
+  font-family: $font1;
+  font-weight: 400;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
