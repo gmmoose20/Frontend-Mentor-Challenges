@@ -1,6 +1,7 @@
 @use "./base" as *;
 .main-container {
   border: 2px solid red;
+  padding: 85px 30px;
   min-width: 325px;
 
   .img-header {
@@ -24,26 +25,11 @@
 
 @media (min-width: 375px) {
   .main-container {
-    border: 2px solid red;
-    padding: 85px 30px;
-    min-width: 325px;
-
     .img-header {
-      border: 2px solid yellow;
-      height: 250px;
-      width: 100%;
       background-image: url("../images/image-header-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
     }
 
     .main-content {
-      text-align: center;
-      h1 {
-        span {
-          color: $accent;
-        }
-      }
     }
   }
 }
