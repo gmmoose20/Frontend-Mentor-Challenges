@@ -14,17 +14,29 @@
   }
 
   .main-content {
+    border: 2px solid orange;
     text-align: center;
-    h1 {
-      span {
-        color: $accent;
+
+    .main-info {
+      border: 2px solid pink;
+
+      h1 {
+        span {
+          color: $accent;
+        }
       }
+    }
+    .content-stats {
+      border: 2px solid green;
     }
   }
 }
 
-@media (min-width: 375px) {
+// Desktop Mode
+
+@media (min-width: 768px) {
   .main-container {
+    border: 2px solid blue;
     .img-header {
       background-image: url("../images/image-header-desktop.jpg");
     }
