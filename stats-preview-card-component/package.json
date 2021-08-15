@@ -7,14 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Gm S.",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.27.5",
-    "cssnano": "^5.0.7",
-    "gulp": "^3.9.1",
-    "gulp-postcss": "^9.0.0",
+    "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
-    "gulp-terser": "^2.0.1"
+    "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.7",
+    "gulp-postcss": "^9.0.0"
   }
 }

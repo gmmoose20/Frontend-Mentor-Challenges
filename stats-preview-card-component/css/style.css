@@ -1,0 +1,2 @@
+:root{--font-inter:"Inter",sans-serif;--font-lexendDeca:"Lexend Deca",sans-serif;--main-bg-color:#090b1a;--card-bg-color:#1b1938;--accent:#aa5cdb;--main-heading-stats-color:#fff;--main-paragraph-color:#fff;--stat-headings-color:hsla(0,0%,100%,0.6)}html{box-sizing:border-box;font-size:100%}*,:after,:before{box-sizing:inherit}body{background-color:var(--main-bg-color);font-family:var(--font-inter);margin:0;padding:0}h1,h2,h3{color:var(--main-heading-stats-color);margin-top:0}.highlighted{color:var(--accent)}
+/*# sourceMappingURL=style.css.map */
