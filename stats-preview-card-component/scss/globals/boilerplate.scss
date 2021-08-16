@@ -1,3 +1,4 @@
+@use '../util/' as *;
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -14,4 +15,9 @@ body {
   padding: 0;
   background-color: var(--main-bg-color);
   font-family: var(--font-inter);
+}
+
+main {
+  border: 2px solid yellow;
+  padding: rem(85) rem(20);
 }
