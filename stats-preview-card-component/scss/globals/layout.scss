@@ -2,6 +2,21 @@
 
 .main-container {
   border: 2px solid red;
+  margin: 0 auto;
 
-  min-width: rem(330);
+  max-width: rem(330);
+
+  @include breakpoint(medium) {
+    max-width: rem(1110);
+  }
+}
+
+.img-header {
+  border: 2px solid blue;
+  height: 240px;
+  // min-width: 325px;
+  background: url("../../images/image-header-mobile.jpg") var(--accent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
 }
