@@ -3,12 +3,12 @@
 .main-container {
   border: 2px solid red;
   // margin: 0 auto;
-
   min-width: rem(200);
 
   @include breakpoint(large) {
     max-width: rem(1115);
-    height: rem(445);
+    // max-height: auto;
+    min-height: rem(445);
     display: flex;
     flex-direction: row-reverse;
   }
@@ -17,16 +17,17 @@
 .img-header {
   border: 2px solid blue;
   min-height: rem(240);
-  // min-width: rem(20);
+
   background: url("../../images/image-header-mobile.jpg") var(--accent);
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
 
-  @include breakpoint(medium) {
+  @include breakpoint(large) {
     background: url("../../images/image-header-desktop.jpg") var(--accent);
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    // display: none;
   }
 }
 
