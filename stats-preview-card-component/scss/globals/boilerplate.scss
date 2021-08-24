@@ -13,12 +13,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--main-bg-color);
+
   font-family: var(--font-inter);
 }
 
 main {
-  border: 5px solid yellow;
+  background-color: var(--main-bg-color);
   padding: rem(85) rem(20);
   text-align: center;
 
