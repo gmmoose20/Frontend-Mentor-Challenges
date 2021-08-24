@@ -2,7 +2,7 @@
 
 .main-container {
   border: 2px solid red;
-  // margin: 0 auto;
+  background-color: var(--card-bg-color);
   min-width: rem(200);
 
   @include breakpoint(large) {
