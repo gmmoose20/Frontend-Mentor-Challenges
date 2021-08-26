@@ -6,6 +6,7 @@
   min-width: rem(200);
 
   @include breakpoint(large) {
+    text-align: left;
     max-width: rem(1115);
     min-height: rem(445);
     display: flex;
@@ -36,11 +37,25 @@
   flex: 50%;
 }
 
+.p-info {
+  @include breakpoint(large) {
+    margin-bottom: rem(150);
+  }
+}
+
 .content-stats {
   @include breakpoint(large) {
     border: 2px solid red;
+
     display: flex;
-    justify-content: space-between;
+    max-height: rem(60);
+    justify-content: space-around;
     align-items: center;
+    // justify-content: space-between;
+    // align-items: center;
+  }
+
+  div {
+    border: 2px solid blue;
   }
 }
