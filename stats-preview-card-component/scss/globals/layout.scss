@@ -46,13 +46,9 @@
 .content-stats {
   @include breakpoint(large) {
     border: 2px solid red;
-
     display: flex;
+    justify-content: space-between;
     max-height: rem(60);
-    justify-content: space-around;
-    align-items: center;
-    // justify-content: space-between;
-    // align-items: center;
   }
 
   div {
