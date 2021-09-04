@@ -30,7 +30,11 @@
 }
 
 .main-content {
-  padding: 30px;
+  padding: rem(30);
+
+  @include breakpoint(large) {
+    padding: rem(80);
+  }
 }
 
 .column {
@@ -49,9 +53,6 @@
     display: flex;
     justify-content: space-between;
     max-height: rem(60);
-  }
-
-  div {
-    border: 2px solid blue;
+    max-width: rem(360);
   }
 }
