@@ -4,17 +4,20 @@
   border-radius: rem(10);
   background-color: var(--card-bg-color);
   min-width: rem(200);
+  // max-height: rem(100s);
+  border: 10px solid yellow;
 
   @include breakpoint(large) {
     text-align: left;
     max-width: rem(1115);
-    min-height: rem(445);
+    height: rem(420);
     display: flex;
     flex-direction: row-reverse;
   }
 }
 
 .img-header {
+  border: 2px solid red;
   min-height: rem(240);
 
   background: url("../../images/image-header-mobile.jpg") var(--accent);
@@ -25,7 +28,9 @@
   @include breakpoint(medium) {
     background: url("../../images/image-header-desktop.jpg") var(--accent);
     background-size: 100% 100%;
+    height: rem(400);
     background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
