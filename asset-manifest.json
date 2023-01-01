@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/stats-preview-card-component/static/css/main.a437e6ef.css",
+    "main.js": "/stats-preview-card-component/static/js/main.7dabce76.js",
+    "static/media/image-header-mobile.jpg": "/stats-preview-card-component/static/media/image-header-mobile.399f71e732a77d1f56c6.jpg",
+    "static/media/image-header-desktop.jpg": "/stats-preview-card-component/static/media/image-header-desktop.72d6e2a00c9131c7b6a6.jpg",
+    "index.html": "/stats-preview-card-component/index.html",
+    "main.a437e6ef.css.map": "/stats-preview-card-component/static/css/main.a437e6ef.css.map",
+    "main.7dabce76.js.map": "/stats-preview-card-component/static/js/main.7dabce76.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a437e6ef.css",
+    "static/js/main.7dabce76.js"
+  ]
+}
